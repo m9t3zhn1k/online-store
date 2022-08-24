@@ -1,0 +1,57 @@
+@import "../../styles/pallete.scss";
+
+.card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr / 1fr;
+  padding: 0.5rem;
+  border: 2px solid $grey;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  background-color: $dark-color-transparent;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s;
+  cursor: pointer;
+
+  & > *:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+  
+  & > p {
+    user-select: auto;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    border-radius: 0.25rem;
+    
+    &_container {
+      background-color: $white;
+      border-radius: 0.25rem;
+      position: relative;
+      padding: 0 0 100%;
+    }
+  }
+
+  &__title {
+    align-self: center;
+    font-size: 1rem;
+    text-align: center;
+    margin: .75rem 0 !important;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: $dark-color-transparent-hover;
+  }
+  
+  &.checked {
+    background-color: $dark-color-transparent-checked;
+    border: 2px solid $light-color-hover;
+  }
+}

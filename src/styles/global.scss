@@ -1,0 +1,75 @@
+@import "./pallete.scss";
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./nouislider.scss";
+
+html {
+  height: 100%;
+  font-size: 20px;
+  letter-spacing: 0.04rem;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.25;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Comfortaa';
+  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) ), url('../assets/images/background/background-page.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@keyframes trambling-animation {
+  0%,
+  50%,
+  100% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+      transform: rotate(-2.5deg);
+      -webkit-transform: rotate(-2.5deg);
+      -moz-transform: rotate(-2.5deg);
+      -o-transform: rotate(-2.5deg);
+      -ms-transform: rotate(-2.5deg);
+  }
+
+  20%,
+  40% {
+      transform: rotate(2.5deg);
+      -webkit-transform: rotate(2.5deg);
+      -moz-transform: rotate(2.5deg);
+      -o-transform: rotate(2.5deg);
+      -ms-transform: rotate(2.5deg);
+  }
+}
+
+@media (max-width: 1440px ) {
+  .container {
+    padding-left: calc(10px + 50 * (100vw - 768px) / (1440 - 768));
+    padding-right: calc(10px + 50 * (100vw - 768px) / (1440 - 768));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
